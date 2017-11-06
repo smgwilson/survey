@@ -1,0 +1,42 @@
+.container {
+  font-family: sans-serif;
+  border: 1px solid black;
+  padding: 30px;
+  margin: 25px auto;
+}
+
+.hide {
+  display: none;
+}
+
+.question {
+  padding: 10px;
+  margin: 5px;
+}
+
+.vertical-radio-buttons div {
+  display: block;
+  padding: 0 0 5px 5px;
+  clear: both;
+}
+.vertical-radio-buttons span {
+  display: block;
+  padding-left: 20px;
+  cursor: inherit;
+}
+
+.vertical-radio-buttons input {
+  float: left;
+  width: 20px;
+  margin-left: -20px;
+  padding: 0;
+  -webkit-appearance: radio;
+}
+
+#submit{
+  padding: 5px;
+  margin: 10px;
+  background-color: lightgrey;
+  border: 1px solid black;
+  border-radius: 10%;
+}
