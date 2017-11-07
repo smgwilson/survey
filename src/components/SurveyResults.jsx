@@ -3,10 +3,11 @@ import { connect } from'react-redux';
 
 class SurveyResults extends Component {
   render() {
+    console.log('SurveyResults', this.props);
     return (
       <div>
         <h4>You selected: {this.props.responseText}</h4>
-        <div>
+        <div className="results">
           <p>Response Tally:</p>
           <div>
             {
@@ -28,7 +29,7 @@ class SurveyResults extends Component {
 
 const mapStateToProps = state => {
   return {
-    surveyResults: state.votes.questionId.answers
+    surveyResults: state.votes.questionId
   }
 }
 

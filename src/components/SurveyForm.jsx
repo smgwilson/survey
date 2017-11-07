@@ -44,7 +44,7 @@ class SurveyForm extends Component {
       );
     });
     return(
-      <div>
+      <div className="main">
         {
           this.state.submitted ? <SurveyResults responseText={randomQuestion.answers[selectedIdx].text}/> : null
         }
