@@ -5,6 +5,7 @@ You can find the most recent version of this guide [here](https://github.com/fac
 
 ## Table of Contents
 
+- [Project](#project)
 - [Updating to New Releases](#updating-to-new-releases)
 - [Sending Feedback](#sending-feedback)
 - [Folder Structure](#folder-structure)
@@ -94,6 +95,16 @@ You can find the most recent version of this guide [here](https://github.com/fac
   - [`npm run build` fails to minify](#npm-run-build-fails-to-minify)
   - [Moment.js locales are missing](#momentjs-locales-are-missing)
 - [Something Missing?](#something-missing)
+
+## Project
+
+This is a small ReactJs application that mocks a survey.  Questions and their corresponding 
+responses are randomly selected from a JSON file.  
+
+When the user selects a response, updated results are displayed above the survey form.  
+Redux manages the application state. 
+
+The application is designed to use composable components that will work with any data.  
 
 ## Updating to New Releases
 
