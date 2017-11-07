@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { select_response } from '../actions';
+import { vote } from '../actions';
 
 class RadioButtonGroup extends Component {
   constructor(props) {
@@ -10,7 +10,7 @@ class RadioButtonGroup extends Component {
 
   handleOptionChange (event) {
       let value = Number(event.target.value);
-      this.props.select_response(value);
+      this.props.vote(this.props.question, value);
     }  
   
   renderRadioButtons() {
@@ -31,5 +31,5 @@ class RadioButtonGroup extends Component {
   }
 }
 
-export default connect(null, { select_response })(RadioButtonGroup);
+export default connect(null, { vote })(RadioButtonGroup);
 

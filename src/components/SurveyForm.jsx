@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import RadioButtonGroup from './RadioButtonGroup';
 import RadioButton from './RadioButton';
 import SurveyResults from './SurveyResults';
-import { vote } from '../actions';
 import questions from '../data/questions.json';
 
 class SurveyForm extends Component {
@@ -17,7 +16,6 @@ class SurveyForm extends Component {
 
   onSubmit(e){
     e.preventDefault();
-    this.props.vote(this.state.question, (this.props.selectedResponse));
     this.setState({
       submitted: true,
     });
@@ -54,7 +52,7 @@ class SurveyForm extends Component {
         <form onSubmit={this.onSubmit.bind(this)}>
           <div>
             <div className="question"></div>
-            <RadioButtonGroup group="choices">
+            <RadioButtonGroup group="choices" question={this.state.question}>
               {radioButtons}
             </RadioButtonGroup>
           </div>
@@ -72,8 +70,8 @@ class SurveyForm extends Component {
 
 const mapStateToProps = state => {
   return {
-    selectedResponse: state.surveyResponse.answerId
+    selectedResponse: state.votes.answerId
   };
 }
 
-export default connect (mapStateToProps, {vote})(SurveyForm);
+export default connect(mapStateToProps, null)(SurveyForm);

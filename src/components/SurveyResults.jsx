@@ -28,7 +28,7 @@ class SurveyResults extends Component {
 
 const mapStateToProps = state => {
   return {
-    surveyResults: state.tallyVotes.questionId.answers
+    surveyResults: state.votes.questionId.answers
   }
 }
 
